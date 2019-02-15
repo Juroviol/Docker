@@ -1,6 +1,11 @@
 # Docker
 Exemplos de utilização do Docker
 
+Listar imagens baixadas
+
+```
+$ docker image ls
+```
 
 ## MySQL
 
