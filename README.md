@@ -16,13 +16,13 @@ $ docker container ls --all
 Iniciar um container parado
 
 ```
-$ docker container <name> start
+$ docker container start <name>
 ```
 
 Parar um container
 
 ```
-$ docker container <name> stop
+$ docker container stop <name>
 ```
 
 Iniciar uma sessão bash no container para rodar comandos bash dentro do container
