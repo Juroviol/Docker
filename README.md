@@ -25,7 +25,7 @@ Parar um container
 $ docker container <name> stop
 ```
 
-Acessar o container com o programa bash
+Iniciar uma sessão bash no container para rodar comandos bash dentro do container
 
 ```
 $ docker exec -it <container> bash
