@@ -25,6 +25,12 @@ Parar um container
 $ docker container <name> stop
 ```
 
+Acessar o container com o programa bash
+
+```
+$ docker exec -it <container> bash
+```
+
 ## MySQL
 
 Baixando e rodando a imagem do MySQL
