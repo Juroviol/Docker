@@ -19,6 +19,12 @@ Iniciar um container parado
 $ docker container <name> start
 ```
 
+Parar um container
+
+```
+$ docker container <name> stop
+```
+
 ## MySQL
 
 Baixando e rodando a imagem do MySQL
