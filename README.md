@@ -7,6 +7,18 @@ Listar imagens baixadas
 $ docker image ls
 ```
 
+Listar os containeres criados
+
+```
+$ docker container ls --all
+```
+
+Iniciar um container parado
+
+```
+$ docker container <name> start
+```
+
 ## MySQL
 
 Baixando e rodando a imagem do MySQL
