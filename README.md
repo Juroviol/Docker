@@ -31,6 +31,24 @@ Iniciar uma sessão bash no container para rodar comandos bash dentro do contain
 $ docker exec -it <container> bash
 ```
 
+## PostgreSQL
+
+Baixando e rodando a imagem do Postgre
+
+1. Primeiramente é pricos baixar uma imagem do Postgre
+
+```
+$ docker pull postgres
+```
+
+2. Iniciar um container contendo a imagem do Postgres exponrta na porta 5432
+
+```
+$ docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+```
+
+Pronto agora você está pronto para utilizar o Postgres.
+
 ## MySQL
 
 Baixando e rodando a imagem do MySQL
@@ -59,4 +77,4 @@ $ mysql -p
 $ RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
 ```
 
-Pronto agora você está pronto para conectar de qualquer SGBD.
+Pronto agora você está pronto para utilizar o MySQL
