@@ -35,19 +35,31 @@ $ docker exec -it <container> bash
 
 Baixando e rodando a imagem do Postgre
 
-1. Primeiramente é pricos baixar uma imagem do Postgre
+1. Primeiramente é preciso baixar uma imagem do Postgre
 
 ```
 $ docker pull postgres
 ```
 
-2. Iniciar um container contendo a imagem do Postgres exponrta na porta 5432
+2. Iniciar um container contendo a imagem do Postgres exposta na porta 5432
 
 ```
 $ docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 ```
 
 Pronto agora você está pronto para utilizar o Postgres.
+
+**Opcional**: Iniciar um container contendo a imagem do Postgres com script .sql de inicialização
+
+```
+$ docker run --name postgres -v /path/to/directory/with/sql:/docker-entrypoint-initdb.d -e POSTGRES_PASSWORD=mysecretpasswrd -p 5432:5432 -d postgres:9.4
+```
+
+Onde `/path/to/directory/with/sql` é um caminho absoluto, mas pode ser utizado um caminho relativo, conforme abaixo
+
+```
+$ docker run --name postgres -v ${PWD}/directory/with/sql:/docker-entrypoint-initdb.d -e POSTGRES_PASSWORD=mysecretpasswrd -p 5432:5432 -d postgres:9.4
+```
 
 ## MySQL
 
