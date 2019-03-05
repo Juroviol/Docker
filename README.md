@@ -73,7 +73,7 @@ $ docker pull mysql
 2. Iniciar um container contendo a imagem do MySQL expondo na porta 3306
 
 ```
-$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=<secret> -d -p 3306:3306 mysql
+$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=<secret> -p 3306:3306 -d mysql
 ```
 
 3. Acessar o container e acessar o client do MySQL
