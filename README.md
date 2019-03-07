@@ -1,5 +1,5 @@
 # Docker
-Exemplos de utilização do Docker
+Comandos de utilização do Docker
 
 Listar imagens baixadas
 
@@ -31,7 +31,9 @@ Iniciar uma sessão bash no container para rodar comandos bash dentro do contain
 $ docker exec -it <container> bash
 ```
 
-## PostgreSQL
+## 1. Exemplos de utilização
+
+### 1.1 PostgreSQL
 
 Baixando e rodando a imagem do Postgre
 
@@ -61,7 +63,7 @@ Onde `/path/to/directory/with/sql` é um caminho absoluto, mas pode ser utizado 
 $ docker run --name postgres -v ${PWD}/directory/with/sql:/docker-entrypoint-initdb.d -e POSTGRES_PASSWORD=mysecretpasswrd -p 5432:5432 -d postgres:9.4
 ```
 
-## MySQL
+### 1.2 MySQL
 
 Baixando e rodando a imagem do MySQL
 
