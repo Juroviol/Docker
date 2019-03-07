@@ -25,6 +25,12 @@ Parar um container
 $ docker container stop <name>
 ```
 
+Remover um container
+
+```
+$ docker rm <name>
+```
+
 Iniciar uma sessão bash no container para rodar comandos bash dentro do container
 
 ```
