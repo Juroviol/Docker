@@ -1,6 +1,6 @@
 # Docker
 
-Comandos de utilização do Docker
+Comandos básicos
 ---
 
 Listar imagens baixadas
@@ -39,9 +39,12 @@ Iniciar uma sessão bash no container para rodar comandos bash dentro do contain
 $ docker exec -it <container> bash
 ```
 
-## 1. Exemplos básicos
+Exemplos de utilização
+---
 
-### 1.1 PostgreSQL
+### Básicos
+
+#### PostgreSQL
 
 Baixando e rodando a imagem do Postgre
 
@@ -70,8 +73,7 @@ Onde `/path/to/directory/with/sql` é um caminho absoluto, mas pode ser utizado 
 ```
 $ docker run --name postgres -v ${PWD}/directory/with/sql:/docker-entrypoint-initdb.d -e POSTGRES_PASSWORD=mysecretpasswrd -p 5432:5432 -d postgres:9.4
 ```
-
-### 1.2 MySQL
+#### MySQL
 
 Baixando e rodando a imagem do MySQL
 
@@ -101,6 +103,8 @@ $ RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/my
 
 Pronto agora você está pronto para utilizar o MySQL
 
-## 2. Exemplos avançados
+### Avançados
+
+#### Exemplos avançados
 
 - [Criação de imagem](https://github.com/Juroviol/Docker/tree/master/eletron-databases)
