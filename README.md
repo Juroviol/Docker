@@ -1,5 +1,7 @@
 # Docker
+
 Comandos de utilização do Docker
+---
 
 Listar imagens baixadas
 
@@ -37,7 +39,7 @@ Iniciar uma sessão bash no container para rodar comandos bash dentro do contain
 $ docker exec -it <container> bash
 ```
 
-## 1. Exemplos de utilização de imagem
+## 1. Exemplos básicos
 
 ### 1.1 PostgreSQL
 
@@ -99,6 +101,6 @@ $ RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/my
 
 Pronto agora você está pronto para utilizar o MySQL
 
-## 2. Exemplos
+## 2. Exemplos avançados
 
 - [Criação de imagem](https://github.com/Juroviol/Docker/tree/master/eletron-databases)
