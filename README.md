@@ -105,6 +105,4 @@ Pronto agora você está pronto para utilizar o MySQL
 
 ### Avançados
 
-#### Exemplos avançados
-
 - [Criação de imagem](https://github.com/Juroviol/Docker/tree/master/eletron-databases)
