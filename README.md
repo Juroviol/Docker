@@ -3,41 +3,49 @@
 Comandos básicos
 ---
 
-Listar imagens baixadas
+**Listar imagens baixadas**
 
 ```
 $ docker image ls
 ```
 
-Listar os containeres criados
+**Listar os containeres criados**
 
 ```
 $ docker container ls --all
 ```
 
-Iniciar um container parado
+**Iniciar um container parado**
 
 ```
 $ docker container start <name>
 ```
 
-Parar um container
+**Parar um container**
 
 ```
 $ docker container stop <name>
 ```
 
-Remover um container
+**Remover um container**
 
 ```
 $ docker rm <name>
 ```
 
-Iniciar uma sessão bash no container para rodar comandos bash dentro do container
+**Iniciar uma sessão bash no container para rodar comandos bash dentro do container**
 
 ```
 $ docker exec -it <container> bash
 ```
+
+**Construir uma imagem a partir do Dockerfile**
+
+```
+$ docker build <directory> -t <name>
+```
+
+Onde `directory` é o diretório onde está o Dockerfile e `name` o nome da imagem que será criada.
 
 Exemplos de utilização
 ---
