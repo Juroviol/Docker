@@ -33,6 +33,12 @@ $ docker container stop <name>
 $ docker rm <name>
 ```
 
+**Remover uma imagem**
+
+```
+$ docker image rmi <image_id>
+```
+
 **Iniciar uma sessão bash no container para rodar comandos bash dentro do container**
 
 ```
