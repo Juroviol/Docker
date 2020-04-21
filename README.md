@@ -53,6 +53,15 @@ $ docker build <directory> -t <name>
 
 Onde `directory` é o diretório onde está o Dockerfile e `name` o nome da imagem que será criada.
 
+**Iniciar um container a partir de uma imagem**
+
+```
+$ docker run --name <container-name> -d <image-name>
+```
+
+Onde `container-name` é o nome que será dado ao container, e `imagem-name` é o nome da imagem a partir do qual o container será iniciado.
+
+
 Exemplos de utilização
 ---
 
