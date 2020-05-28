@@ -12,6 +12,11 @@
   - [Iniciar um container a partir de uma imagem](#iniciar-um-container-a-partir-de-uma-imagem)
   - [Salvar uma imagem criada em um arquivo .tar](#salvar-uma-imagem-criada-em-um-arquivo-tar)
   - [Carregar uma imagem a partir de um arquivo .tar](#carregar-uma-imagem-a-partir-de-um-arquivo-tar)
+- [Exemplos de utilização](#exemplos-de-utilização)
+  - [Básicos](#básicos)
+    - [PostgreSQL](#postgresql)
+    - [MySQL](#mysql)
+  - [Avançados](#avançados)
 
 ### Comandos básicos
 
