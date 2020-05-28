@@ -1,5 +1,18 @@
 # Docker
 
+- [Comandos básicos](#comandos-básicos)
+  - [Listar imagens baixadas](#listar-imagens-baixadas)
+  - [Listar os containeres criados](#listar-os-containeres-criados)
+  - [Iniciar um container parado](#iniciar-um-container-parado)
+  - [Parar um container](#parar-um-container)
+  - [Remover um container](#remover-uma-imagem)
+  - [Remover uma imagem](#remover-uma-imagem)
+  - [Iniciar uma sessão bash no container para rodar comandos bash dentro do container](#iniciar-uma-sessão-bash-no-container-para-rodar-comandos-bash-dentro-do-container)
+  - [Construir uma imagem a partir do Dockerfile](#construir-uma-imagem-a-partir-do-dockerfile)
+  - [Iniciar um container a partir de uma imagem](#iniciar-um-container-a-partir-de-uma-imagem)
+  - [Salvar uma imagem criada em um arquivo .tar](#salvar-uma-imagem-criada-em-um-arquivo-tar)
+  - [Carregar uma imagem a partir de um arquivo .tar](#carregar-uma-imagem-a-partir-de-um-arquivo-tar)
+
 ### Comandos básicos
 
 #### Listar imagens baixadas
