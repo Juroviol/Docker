@@ -61,6 +61,22 @@ $ docker run --name <container-name> -d <image-name>
 
 Onde `container-name` é o nome que será dado ao container, e `imagem-name` é o nome da imagem a partir do qual o container será iniciado.
 
+**Salvar uma imagem criada em um arquivo .tar**
+
+```
+$ docker save --output <tar-name> <image-name>
+```
+
+Onde `tar-name` é o nome do arquivo tar salvado e `image-name` o nome da imagem que será salvada como .tar.
+
+**Carregar uma imagem a partir de um arquivo .tar**
+
+```
+$ docker load --input <tar-name>
+```
+
+Onde `tar-name` é o nome do arquivo .tar 
+
 
 Exemplos de utilização
 ---
