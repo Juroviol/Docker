@@ -90,12 +90,11 @@ $ docker load --input <tar-name>
 Onde `tar-name` é o nome do arquivo .tar 
 
 
-Exemplos de utilização
----
+### Exemplos de utilização
 
-### Básicos
+#### Básicos
 
-#### PostgreSQL
+##### PostgreSQL
 
 Baixando e rodando a imagem do Postgre
 
@@ -124,7 +123,7 @@ Onde `/path/to/directory/with/sql` é um caminho absoluto, mas pode ser utizado 
 ```
 $ docker run --name postgres -v ${PWD}/directory/with/sql:/docker-entrypoint-initdb.d -e POSTGRES_PASSWORD=mysecretpasswrd -p 5432:5432 -d postgres:9.4
 ```
-#### MySQL
+##### MySQL
 
 Baixando e rodando a imagem do MySQL
 
@@ -154,6 +153,6 @@ $ RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/my
 
 Pronto agora você está pronto para utilizar o MySQL
 
-### Avançados
+#### Avançados
 
 - [Criação de imagem](https://github.com/Juroviol/Docker/tree/master/eletron-databases)
