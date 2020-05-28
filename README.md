@@ -1,51 +1,50 @@
 # Docker
 
-Comandos básicos
----
+### Comandos básicos
 
-**Listar imagens baixadas**
+#### Listar imagens baixadas
 
 ```
 $ docker image ls
 ```
 
-**Listar os containeres criados**
+#### Listar os containeres criados
 
 ```
 $ docker container ls --all
 ```
 
-**Iniciar um container parado**
+#### Iniciar um container parado
 
 ```
 $ docker container start <name>
 ```
 
-**Parar um container**
+#### Parar um container
 
 ```
 $ docker container stop <name>
 ```
 
-**Remover um container**
+#### Remover um container
 
 ```
 $ docker rm <name>
 ```
 
-**Remover uma imagem**
+#### Remover uma imagem
 
 ```
 $ docker image rmi <image_id>
 ```
 
-**Iniciar uma sessão bash no container para rodar comandos bash dentro do container**
+#### Iniciar uma sessão bash no container para rodar comandos bash dentro do container
 
 ```
 $ docker exec -it <container> bash
 ```
 
-**Construir uma imagem a partir do Dockerfile**
+#### Construir uma imagem a partir do Dockerfile
 
 ```
 $ docker build <directory> -t <name>
@@ -53,7 +52,7 @@ $ docker build <directory> -t <name>
 
 Onde `directory` é o diretório onde está o Dockerfile e `name` o nome da imagem que será criada.
 
-**Iniciar um container a partir de uma imagem**
+#### Iniciar um container a partir de uma imagem
 
 ```
 $ docker run --name <container-name> -d <image-name>
@@ -61,7 +60,7 @@ $ docker run --name <container-name> -d <image-name>
 
 Onde `container-name` é o nome que será dado ao container, e `imagem-name` é o nome da imagem a partir do qual o container será iniciado.
 
-**Salvar uma imagem criada em um arquivo .tar**
+#### Salvar uma imagem criada em um arquivo .tar
 
 ```
 $ docker save --output <tar-name> <image-name>
@@ -69,7 +68,7 @@ $ docker save --output <tar-name> <image-name>
 
 Onde `tar-name` é o nome do arquivo tar salvado e `image-name` o nome da imagem que será salvada como .tar.
 
-**Carregar uma imagem a partir de um arquivo .tar**
+#### Carregar uma imagem a partir de um arquivo .tar
 
 ```
 $ docker load --input <tar-name>
