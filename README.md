@@ -47,8 +47,6 @@ Os containeres são criados a partir de imagens Docker. Uma imagem Docker é um 
 
 ## Comandos básicos
 
-<br/>
-
 ### Baixar uma imagem
 
 ```
