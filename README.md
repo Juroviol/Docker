@@ -199,3 +199,7 @@ Pronto agora você está pronto para utilizar o MySQL
 <br/>
 
 ## Docker Compose
+
+Conforme vimos acima, uma vez instalado o Docker em uma máquina, podemos executar os comandos mencionados para se iniciar um container que envolve: executar o comando para realizar o donwload da imagem e em seguida executar o comando para se iniciar o container passando algumas configurações. Isto funciona perfeitamente. Mas e se, por exemplo, quisermos rodar uma aplicação desenvolvida em um container e em outro container rodar um banco de dados. Teríamos que fazer o mesmo processo para os dois containeres, correto? Mas e se tivermos uma necessidade que demande de 5 serviços, ou até mais, estarem rodando ao mesmo tempo cada um seu respectivo container e com suas dependências? Faríamos este processo para cada container?
+
+Para resolver este problema existe o Docker Compose.
