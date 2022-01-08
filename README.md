@@ -1,5 +1,7 @@
 # Docker
 
+- [Introdução](#introdução)
+
 - [Comandos básicos](#comandos-básicos)
   - [Listar imagens baixadas](#listar-imagens-baixadas)
   - [Listar os containeres criados](#listar-os-containeres-criados)
@@ -17,52 +19,93 @@
     - [PostgreSQL](#postgresql)
     - [MySQL](#mysql)
   - [Avançados](#avançados)
+- [Docker Compose](#)
 
-### Comandos básicos
+<br/>
 
-#### Listar imagens baixadas
+## Introdução
+
+Antigamente quando não existia Docker e queríamos testar uma aplicação desenvolvida na nossa máquina, teríamos que instalar a base de dados e outras dependências necessárias. É claro que isso funciona, e funciona atualmente e provavelmente muitas pessoas ainda fazem assim. O problema é que a aplicação fica altamente vinculada ao ambiente instalado, que no caso é o seu computador. Desta forma não pode ser compartilhada, bagunça a seu computador com instalações e claramente não é um ambiente reproduzível. Lembra da história na minha máquina funciona? Então, isso acaba com o Docker.
+
+Eis algumas perguntas pertinentes que nos ajudam a entender o que o Docker soluciona:
+
+1. E se você está trabalhando em dois projetos que utilizam diferentes versões da sua base de dados favorita?
+2. E se você está trabalhando com diferentes linguagens de programação? Você as mantém com suas respectivas dependências instaladas e mantidas no seu computador? Em versões diferentes?
+3. E se você quisesse compartilhar o que você desenvolveu com os seus colegas? Quão frequentemente seus computadores possuem configurações totalmente diferentes? Será que rodará?
+3. Quantos processos rodando em plano de fundo 24/7 para rodar e testar seu software?
+4. E se você possui além do seu ambiente local, diversos outros ambientes como: ambiente de desenvolvimento, homologação e produção? Fará todo o processo de instalação das dependências que sua aplicação utiliza em todos os ambientes? E se eu precisar criar diversos ambientes de homologação para testar funcionalidades independentes?
+
+O Docker nos ajuda com todas estas questões e muito mais. O Docker é uma plataforma de código aberto para criar, executar e gerenciar conteineres.
+
+Os containers funcionam um pouco como as máquinas virtuais (VMs), mas de uma maneira muito mais específica e granular. Em uma máquina virtual, é possível utilizar diversos recursos e ferramentas rodando. Porém tudo roda em um mesmo sistema operacional. Em caso de pane tudo é afetado.
+
+No caso dos containers, a ideia é que cada um faça apenas um serviço e assuma uma só responsabilidade. Pegando a ideia da aplicação e o seu banco de dados, poderíamos ter: um container rodando uma aplicação e outro container rodando a base de dados.
+
+Os containeres são criados a partir de imagens Docker. Uma imagem Docker é um arquivo de template que contém diversas instruções para se criar um container. Neste arquivo nós encontramos diversas instruções que serão executadas no Docker instalado na máquina do hospedeiro para disponibilizar algum serviço. Um exemplo prático de imagem Docker conteria instruções para se disponibilizar um banco de dados rodando numa porta X.
+
+<br/>
+
+## Comandos básicos
+
+<br/>
+
+### Baixar uma imagem
+
+```
+$ docker pull <image-name>
+```
+
+### Listar imagens baixadas
 
 ```
 $ docker image ls
 ```
 
-#### Listar os containeres criados
+### Iniciar um container a partir de uma imagem
+
+```
+$ docker run --name <container-name> -d <image-name>
+```
+
+Onde `container-name` é o nome que será dado ao container, e `image-name` é o nome da imagem a partir do qual o container será iniciado.
+
+### Listar os containeres criados
 
 ```
 $ docker container ls --all
 ```
 
-#### Iniciar um container parado
+### Iniciar um container parado
 
 ```
 $ docker container start <name>
 ```
 
-#### Parar um container
+### Parar um container
 
 ```
 $ docker container stop <name>
 ```
 
-#### Remover um container
+### Remover um container
 
 ```
 $ docker rm <name>
 ```
 
-#### Remover uma imagem
+### Remover uma imagem
 
 ```
 $ docker image rmi <image_id>
 ```
 
-#### Iniciar uma sessão bash no container para rodar comandos bash dentro do container
+### Iniciar uma sessão bash no container para rodar comandos bash dentro do container
 
 ```
 $ docker exec -it <container> bash
 ```
 
-#### Construir uma imagem a partir do Dockerfile
+### Construir uma imagem a partir do Dockerfile
 
 ```
 $ docker build <directory> -t <name>
@@ -70,15 +113,7 @@ $ docker build <directory> -t <name>
 
 Onde `directory` é o diretório onde está o Dockerfile e `name` o nome da imagem que será criada.
 
-#### Iniciar um container a partir de uma imagem
-
-```
-$ docker run --name <container-name> -d <image-name>
-```
-
-Onde `container-name` é o nome que será dado ao container, e `imagem-name` é o nome da imagem a partir do qual o container será iniciado.
-
-#### Salvar uma imagem criada em um arquivo .tar
+### Salvar uma imagem criada em um arquivo .tar
 
 ```
 $ docker save --output <tar-name> <image-name>
@@ -86,7 +121,7 @@ $ docker save --output <tar-name> <image-name>
 
 Onde `tar-name` é o nome do arquivo tar salvado e `image-name` o nome da imagem que será salvada como .tar.
 
-#### Carregar uma imagem a partir de um arquivo .tar
+### Carregar uma imagem a partir de um arquivo .tar
 
 ```
 $ docker load --input <tar-name>
@@ -94,14 +129,20 @@ $ docker load --input <tar-name>
 
 Onde `tar-name` é o nome do arquivo .tar 
 
+<br/>
 
-### Exemplos de utilização
+## Exemplos de utilização
 
-#### Básicos
+<br/>
 
-##### PostgreSQL
+### Básicos
 
-Baixando e rodando a imagem do Postgre
+
+#### PostgreSQL
+
+<br/>
+
+Baixando e rodando a imagem do Postgres
 
 1. Primeiramente é preciso baixar uma imagem do Postgre
 
@@ -161,3 +202,9 @@ Pronto agora você está pronto para utilizar o MySQL
 #### Avançados
 
 - [Criação de imagem](https://github.com/Juroviol/Docker/tree/master/eletron-databases)
+
+---
+
+## Docker Compose
+
+Conforme vimos
