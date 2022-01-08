@@ -135,8 +135,6 @@ Onde `tar-name` é o nome do arquivo .tar
 
 #### PostgreSQL
 
-<br/>
-
 Baixando e rodando a imagem do Postgres
 
 1. Primeiramente é preciso baixar uma imagem do Postgre
