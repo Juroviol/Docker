@@ -131,10 +131,7 @@ Onde `tar-name` é o nome do arquivo .tar
 
 ## Exemplos de utilização
 
-<br/>
-
 ### Básicos
-
 
 #### PostgreSQL
 
