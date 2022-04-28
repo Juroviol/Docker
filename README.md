@@ -145,6 +145,8 @@ $ docker push <image_tag>
 
 Onde `image_tag` é a tag gerada com o comando [Taguear uma imagem Docker](#taguear-uma-imagem-docker).
 
+> **Nota**: Como este comando irá publicar uma imagem no repositório de imagens do Docker, é necessário realizar o login via linha de comando: `docker login` para que o Docker saiba onde hospedar a imagem.
+
 <br/>
 
 ## Exemplos de utilização
