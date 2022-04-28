@@ -132,7 +132,7 @@ Onde `tar-name` é o nome do arquivo .tar
 ### Taguear uma imagem Docker
 
 ```
-$ docker tag <image_id>  <account_name>/<image_name>:<tag>
+$ docker tag <image_id> <account_name>/<image_name>:<tag>
 ```
 
 Onde `image_id` é id da imagem, `account_name` é o nome da conta no Docker Hub e `image_name` é o nome da imagem. 
