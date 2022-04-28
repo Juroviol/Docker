@@ -14,6 +14,8 @@
   - [Iniciar um container a partir de uma imagem](#iniciar-um-container-a-partir-de-uma-imagem)
   - [Salvar uma imagem criada em um arquivo .tar](#salvar-uma-imagem-criada-em-um-arquivo-tar)
   - [Carregar uma imagem a partir de um arquivo .tar](#carregar-uma-imagem-a-partir-de-um-arquivo-tar)
+  - [Taguear uma imagem docker](#taguear-uma-imagem-docker)
+  - [Publicar uma imagem no Docker Hub](#publicar-uma-imagem-no-docker-hub)
 - [Exemplos de utilização](#exemplos-de-utilização)
   - [Básicos](#básicos)
     - [PostgreSQL](#postgresql)
@@ -127,8 +129,6 @@ $ docker load --input <tar-name>
 
 Onde `tar-name` é o nome do arquivo .tar 
 
-<br/>
-
 ### Taguear uma imagem Docker
 
 ```
@@ -142,6 +142,8 @@ Onde `image_id` é id da imagem, `account_name` é o nome da conta no Docker Hub
 ```
 $ docker push <username>/<tag>
 ```
+
+<br/>
 
 ## Exemplos de utilização
 
