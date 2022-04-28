@@ -140,8 +140,10 @@ Onde `image_id` é id da imagem, `account_name` é o nome da conta no Docker Hub
 ### Publicar uma imagem no Docker Hub
 
 ```
-$ docker push <username>/<tag>
+$ docker push <image_tag>
 ```
+
+Onde `image_tag` é a tag gerada com o comando [Taguear uma imagem Docker](#taguear-uma-imagem-docker).
 
 <br/>
 
